@@ -7,11 +7,15 @@
 	<body>
 		<div> This is  vue project</div>
 		<div id = "app">
+			<div v-if = "showBook">
 				<h2> {{title}}</h2>
 				<h3>{{author}}</h3>
 				<h4>{{age}}</h4>
-				<button v-on:click = "increaseAge(25)">Increase Age</button>
-				<button v-on:click = "author = 'aung aung' ">Change name</button>
+			</div>
+			<button @click = "showBook = !showBook">
+				<span v-if ="showBook === true"> hide book</span>
+				<span v-if ="showBook === false"> show book</span>
+			</button>
 		</div>
 
 		<script src ="./js/app.js"></script>

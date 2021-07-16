@@ -2,6 +2,7 @@ const smallData = {
 	title : "Anatomy",
 	author : "Doctor",
 	age : 50,
+	showBook : true,
 	
 }
 
