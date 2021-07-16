@@ -4,9 +4,16 @@ const smallData = {
 	age : 50,
 }
 
- const data = {
+//const increaseAge  = function(){alert("hi")};
+//console.log(increaseAge());
+const data = {
 	//template : " My name is Yan Myo Aung. ",
 	data : function(){ return smallData},
+	methods : {
+		increaseAge(){
+			alert("hi")
+		}
+	},
 }	
 
 
