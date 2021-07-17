@@ -8,13 +8,16 @@ const smallData = {
 
 //const increaseAge  = function(){alert("hi")};
 //console.log(increaseAge());
-const mtds = {
+const methods = {
 		increaseAge(age){this.age++},
+		mouseoverHandler(event, dta) {console.log("This is mouseover", event, dta)},
+		mouseleaveHandler() {console.log("This is mouseleave", event.type)},
+		doubleclick() {console.log("this is double click")},
 	}
 const data = {
 	//template : " My name is Yan Myo Aung. ",
-	data : function(){ return smallData},
-	methods : mtds,
+	data(){ return smallData},
+	methods,
 }	
 
 const app = Vue.createApp(data);
