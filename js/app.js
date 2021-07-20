@@ -36,13 +36,23 @@ const methods = {
 		mouseoverHandler(event, dta) {console.log("This is mouseover", event, dta)},
 		mouseleaveHandler() {console.log("This is mouseleave", event.type)},
 		doubleclick() {console.log("this is double click")},
-	}
+		clickHand(b){b.isFav = !b.isFav },
+};
+
+
+const computed = {
+	filteredBooks(){
+		return this.books.filter(books => { return books.isFav});
+	},
+};
+
 
 const data = {
 	//template : " My name is Yan Myo Aung. ",
 	data(){ return smallData},
 	methods,
-}	
+	computed,
+};	
 
 
 const app = Vue.createApp(data);

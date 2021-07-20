@@ -20,11 +20,12 @@
 		</style>
 	</head>
 	<body>
+		
 		<div> This is  vue project</div>
-		<div id = "app">   
+		<div id = "app"> 
 			<div v-if = "showBook">
-				<ul v-for = "book in books">
-					<li :class = "{favorite : book.isFav}" @click = "book.isFav = !book.isFav">
+				<ul v-for = "book in filteredBooks">
+					<li :class = "{favorite : book.isFav}" @click = "clickHand(book)">
 						<img v-bind:src = "book.img" width = "150" height = "200" > 
 						<h2> {{book.title}}</h2>
 						<h3>{{book.author}}</h3>
